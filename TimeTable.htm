@@ -58,93 +58,98 @@
 <table class="time_table" id="tt01">
   <tr>
     <th>Day/Time</th>
-    <th id="9">9:00am-9:45am</th>
-    <th id="10">10:00am-10:45am</th>
-    <th id="11">11:00am-11:45am</th>
-    <th id="12">12:00pm-12:45pm</th>
+    <th class="9">9:00am-9:45am</th>
+    <th class="10">10:00am-10:45am</th>
+    <th class="11">11:00am-11:45am</th>
+    <th class="12">12:00pm-12:45pm</th>
     <th>12:45pm-1:15pm</th>
-    <th id="13">1:15pm-2:00pm</th>
-    <th id="14">2:15pm-3:00pm</th>
-    <th id="15">3:15pm-4:00pm</th>
-    <th id="16">4:15pm-5:00pm</th>
+    <th class="13">1:15pm-2:00pm</th>
+    <th class="14">2:15pm-3:00pm</th>
+    <th class="15">3:15pm-4:00pm</th>
+    <th class="16">4:15pm-5:00pm</th>
     </tr>
   <tr>
     <td id="1">Mon</td>
-    <td>CS210</td>
-    <td>CS210</td>
-    <td>CS211</td>
-    <td>CS204</td>
+    <td class="9">CS210</td>
+    <td class="10">CS210</td>
+    <td class="11">CS211</td>
+    <td class="12">CS204</td>
     <td id="ttc" rowspan="6"><b>Lunch</b></td>
-    <td>CS211</td>
-    <td>HS205</td>
-    <td>CS210</td>
-    <td>CS210</td>
+    <td class="13">CS211</td>
+    <td class="14">HS205</td>
+    <td class="15">CS210</td>
+    <td class="16">CS210</td>
   </tr>
   <tr>
     <td id="2">Tue</td>
-    <td>CS211</td>
-    <td>HS205</td>
-    <td>CS210</td>
-    <td>CS210</td>
-    <td>CS204</td>
-    <td>CS211</td>
-    <td>HS205</td>
-    <td>MA201</td>
+    <td class="9">CS211</td>
+    <td class="10">HS205</td>
+    <td class="11">CS210</td>
+    <td class="12">CS210</td>
+    <td class="13">CS204</td>
+    <td class="14">CS211</td>
+    <td class="15">HS205</td>
+    <td class="16">MA201</td>
   </tr>
   <tr>
     <td id="3">Wed</td>
-    <td>CS204</td>
-    <td>CS211</td>
-    <td>HS205</td>
-    <td>MA201</td>
-    <td>CS210</td>
-    <td>CS210</td>
-    <td>CS211</td>
-    <td>CS204</td>
+    <td class="9">CS204</td>
+    <td class="10">CS211</td>
+    <td class="11">HS205</td>
+    <td class="12">MA201</td>
+    <td class="13">CS210</td>
+    <td class="14">CS210</td>
+    <td class="15">CS211</td>
+    <td class="16">CS204</td>
   </tr>
   <tr>
     <td id="4">Thur</td>
-    <td>CS210</td>
-    <td>CS210</td>
-    <td>CS211</td>
-    <td>CS204</td>
-    <td>MA201</td>
-    <td>MA201</td>
-    <td>CS204</td>
-    <td>CS209</td>
+    <td class="9">CS210</td>
+    <td class="10">CS210</td>
+    <td class="11">CS211</td>
+    <td class="12">CS204</td>
+    <td class="13">MA201</td>
+    <td class="14">MA201</td>
+    <td class="15">CS204</td>
+    <td class="16">CS209</td>
   </tr>
   <tr>
     <td id="5">Fri</td>
-    <td>MA201</td>
-    <td>MA201</td>
-    <td>CS204</td>
-    <td>CS209</td>
-    <td>CS211</td>
-    <td>CS209</td>
-    <td>CS209</td>
-    <td>MA201</td>
+    <td class="9">MA201</td>
+    <td class="10">MA201</td>
+    <td class="11">CS204</td>
+    <td class="12">CS209</td>
+    <td class="13">CS211</td>
+    <td class="14">CS209</td>
+    <td class="15">CS209</td>
+    <td class="16">MA201</td>
   </tr>
   <tr>
     <td id="6">Sat</td>
-    <td>CS211</td>
-    <td>CS209</td>
-    <td>CS209</td>
-    <td>MA201</td>
-    <td>CS210</td>
-    <td>CS210</td>
-    <td>CS211</td>
-    <td>CS204</td>
+    <td class="9">CS211</td>
+    <td class="10">CS209</td>
+    <td class="11">CS209</td>
+    <td class="12">MA201</td>
+    <td class="13">CS210</td>
+    <td class="14">CS210</td>
+    <td class="15">CS211</td>
+    <td class="16">CS204</td>
   </tr>
 </table>
 </div>
 </body>
 <script>
-    var d = new Date();
-    var y = d.getDay();
-    var z = d.getHours()
-    document.getElementById(y).style.color = "#009933";
-    document.getElementById(y).style.backgroundColor = "#b3ffcc";
-    document.getElementById(z).style.color = "#009933";
-    document.getElementById(z).style.backgroundColor = "#b3ffcc";
+	var d = new Date();
+	var y = d.getDay();
+	var z = d.getHours()
+	if(y > 0 && z < 5)
+	{
+		document.getElementById(y).style.color = "#009879";
+		document.getElementById(y).style.backgroundColor = "yellow";
+		document.getElementsByClassName(z)[0].style.color = "#009879";
+		document.getElementsByClassName(z)[0].style.backgroundColor = "yellow";
+		document.getElementsByClassName(z)[y].style.color = "#009879";
+		document.getElementsByClassName(z)[y].style.backgroundColor = "yellow";
+	}
 </script>
 </html>
